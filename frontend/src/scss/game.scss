@@ -1,0 +1,218 @@
+#enter_container{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgba(67,18,174,1) 0%, rgba(129,6,169,1) 100%);
+
+    .room_text{
+        text-align: center;
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+        color: white
+    }
+
+    #room_code{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #enter_name{
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .font-18{
+        font-size: 18px;
+    }
+
+    button{
+        width: 120px;
+        height: 40px;
+        background-color: rgba(67,18,174,1);
+        border: 1px white solid;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
+#room_container{
+    width: 1000px;
+    height: 600px;
+    background-color: red;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background: linear-gradient(90deg, rgba(67,18,174,1) 0%, rgba(129,6,169,1) 100%);
+
+    #players{
+        box-sizing: border-box;
+        padding: 20px 0 20px 0;
+        width: 100%;
+        position: relative;
+
+        #background{
+            background-color: black;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0.1;
+            border-radius: 0 20px 20px 0;
+            z-index: 1;
+        }
+
+        #label{
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            z-index: 10;
+            position: relative;
+        }
+
+        #list{
+            
+            box-sizing: border-box;
+            padding: 0px 20px 0 20px;
+            z-index: 10;
+            position: relative;
+
+            .player{
+                color: white;
+                font-size: 18px;
+                margin: 10px 0 0 0;
+            }
+
+        }
+    }
+
+    #wait_container_not_owner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            color: white;
+            font-size: 24px;
+        }
+    }
+
+    #wait_container_owner{
+        position: relative;;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px;
+
+        p{
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        #choose_pack{
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+
+            button{
+                margin-top: 10px;
+            }
+        }
+
+        #start_game{
+            margin-top: auto;
+        }
+
+    }
+
+}
+
+#timer_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    p{
+        margin: 0;
+        color:white;
+        font-size: 24px;
+        margin-top: 10px;
+    }
+}
+
+#timer_container.timer_visible{
+    animation: show_timer;
+    animation-duration: 2s;
+    opacity: 1;
+}
+
+#timer_container.timer_hidden{
+    animation: hide_timer;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+@keyframes show_timer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes hide_timer{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.button_default{
+    width: 120px;
+    height: 40px;
+    background-color: inherit;
+    border: 1px white solid;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 450px){
+    #enter_container{
+        width: 100%;
+        margin: 0 20px 0 20px;
+    }
+}

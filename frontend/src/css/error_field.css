@@ -1,0 +1,28 @@
+.show_error {
+  animation: show_error;
+  animation-duration: 2s;
+  opacity: 1;
+}
+
+.hide_error {
+  animation: hide_error;
+  animation-duration: 1s;
+  opacity: 0;
+}
+
+@keyframes show_error {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide_error {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=error_field.css.map */

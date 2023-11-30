@@ -1,0 +1,14 @@
+#input_div {
+  width: 100%;
+  border-bottom: 2px white solid;
+  margin-bottom: 10px;
+}
+#input_div input {
+  width: 100%;
+  color: white;
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, rgb(67, 18, 174) 0%, rgb(129, 6, 169) 100%);
+  font-size: 18px;
+  height: 32px;
+}/*# sourceMappingURL=input_default.css.map */
